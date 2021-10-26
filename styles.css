@@ -51,6 +51,8 @@ red - #ee5253
 }
 
 .recipe-form {
+  display: flex;
+  flex-direction: column;
   border: 2px solid red;
   padding: 12% 6%;
   background-color: rgba(225, 225, 225, .9);
