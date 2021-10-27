@@ -36,6 +36,10 @@ red - #ee5253
   font-size: 17px;
 }
 
+.star {
+  color: red;
+}
+
 .recipe-button {
   margin-top: 15px;
   padding: 8px;
