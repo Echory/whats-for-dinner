@@ -44,3 +44,29 @@ var desserts = [
 'Chocolate Croissants',
 'Eclairs'
 ];
+
+var foodResponse;
+
+// QUERY SELECTORS
+var letsCookBtn = document.querySelector('#lets-cook');
+
+
+//EVENT LISTENERS
+letsCookBtn.addEventListener('click', showRecipe);
+
+
+//FUNCTIONS
+function showRecipe() {
+
+}
+
+function generateRecipe() {
+  var foodOption = document.querySelector('input[name="food"]:checked').value;
+  if(foodOption === 'side') {
+    foodResponse = sides[Math.floor(Math.random()*sides.length)];
+  } else if(foodOption === 'main') {
+    foodResponse = mains[Math.floor(Math.random()*mains.length)]
+  } else if(foodOption === 'dessert') {
+    foodResponse = desserts[Math.floor(Math.random()*desserts.length)]
+  }
+}
