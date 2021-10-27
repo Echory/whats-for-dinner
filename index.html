@@ -4,12 +4,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
   <body>
-    <header>
-      <p>What's for Dinner</p>
-      <button>ADD A RECIPE</button>
+    <header class="header">
+      <p class="title">What's for Dinner?</p>
+      <button class="recipe-button">ADD A RECIPE</button>
     </header>
     <section class="main-body">
-      <form>What are you looking for?</form>
+      <form class="recipe-form"><span class="looking-for">What are you looking for?<span class="star">*</span></span>
+        <div class="radio-button">
+          <input type="radio" name="side" id="side" checked>
+          <label for="name">Side</label>
+        </div>
+        <div class="radio-button">
+          <input type="radio" name="main" id="main">
+          <label for="name">Main Dish</label>
+        </div>
+        <div class="radio-button">
+          <input type="radio" name="dessert" id="dessert">
+          <label for="name">Dessert</label>
+        </div>
+        <div class="radio-button">
+          <input type="radio" name="entire" id="entire">
+          <label for="name">Entire Meal</label>
+        </div>
+        <button class="lets-cook">LETS COOK!</button>
+      </form>
       <div class="result">
         <img src="assets/cookpot.svg" class="cookpot">
       </div>
