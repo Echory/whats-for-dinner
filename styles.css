@@ -31,6 +31,7 @@ red - #ee5253
 .title {
   padding-right: 80%;
   margin-top: 20px;
+  margin-left: 5px;
   font-weight: bold;
   font-size: 17px;
 }
@@ -53,21 +54,38 @@ red - #ee5253
 .recipe-form {
   display: flex;
   flex-direction: column;
-  border: 2px solid red;
-  padding: 12% 6%;
+  padding: 6% 5%;
   background-color: rgba(225, 225, 225, .9);
 }
 
+.lets-cook {
+  background-color: #0fb9b1;
+  border: none;
+  padding: 9px;
+  width: 65%;
+  margin-top: 6px;
+  border-radius: 5px;
+}
+
+.radio-button {
+  padding: 5px;
+}
+
+.looking-for {
+  font-size: 24px;
+  padding-bottom: 10px;
+}
+
 .cookpot {
-  border: 2px solid red;
   width: 28%;
   height: 35%;
 }
 
 .result {
-  border: 2px solid red;
   display: flex;
   justify-content: center;
-  padding: 9% 2%;
+  padding: 9.5% 4%;
   background-color: rgba(225, 225, 225, .9);
 }
+
+

@@ -9,15 +9,24 @@
       <button class="recipe-button">ADD A RECIPE</button>
     </header>
     <section class="main-body">
-      <form class="recipe-form">What are you looking for?
-        <input type="radio" name="side" id="side" checked>
-        <label for="name">Side</label>
-        <input type="radio" name="main" id="main">
-        <label for="name">Main Dish</label>
-        <input type="radio" name="dessert" id="dessert">
-        <label for="name">Dessert</label>
-        <input type="radio" name="entire" id="entire">
-        <label for="name">Entire Meal</label>
+      <form class="recipe-form"><span class="looking-for">What are you looking for?</span>
+        <div class="radio-button">
+          <input type="radio" name="side" id="side" checked>
+          <label for="name">Side</label>
+        </div>
+        <div class="radio-button">
+          <input type="radio" name="main" id="main">
+          <label for="name">Main Dish</label>
+        </div>
+        <div class="radio-button">
+          <input type="radio" name="dessert" id="dessert">
+          <label for="name">Dessert</label>
+        </div>
+        <div class="radio-button">
+          <input type="radio" name="entire" id="entire">
+          <label for="name">Entire Meal</label>
+        </div>
+        <button class="lets-cook">LETS COOK!</button>
       </form>
       <div class="result">
         <img src="assets/cookpot.svg" class="cookpot">
