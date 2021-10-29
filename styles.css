@@ -112,7 +112,15 @@ red - #ee5253
   font-weight: bold;
   padding: 9.5% 4%;
   font-style: normal;
-  font-size: 22px;
+  font-size: 20px;
+}
+
+.favorite-btn {
+  border: none;
+  padding: 5px;
+  background-color: #0fb9b1;
+  margin-top: 15px;
+  border-radius: 5px;
 }
 
 

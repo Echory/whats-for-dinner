@@ -46,21 +46,24 @@ var desserts = [
 ];
 
 var foodResponse;
+var favorites = [];
 
 // QUERY SELECTORS
 var letsCookBtn = document.querySelector('#lets-cook');
 var cookpot = document.querySelector('#cookpot');
+var favoriteBtn = document.querySelector('#favoriteBtn');
 
 
 //EVENT LISTENERS
 letsCookBtn.addEventListener('click', showRecipe);
+favoriteBtn.addEventListener('click', favoriteFood);
 
 
 //FUNCTIONS
 function showRecipe(event) {
-event.preventDefault();
-generateRecipe()
-document.getElementById("recipeResult").innerHTML = `<p class="should-make">You should make: <span class="food-response">${foodResponse}</span></p>`;
+  event.preventDefault();
+  generateRecipe()
+  document.getElementById("recipeResult").innerHTML = `<p class="should-make">You should make: <span class="food-response">${foodResponse}</span><button class="favorite-btn id="favoriteBtn">Favorite &#128155</button></p>`;
 
 
 }
@@ -74,4 +77,8 @@ function generateRecipe() {
   } else if(foodOption === 'dessert') {
     foodResponse = desserts[Math.floor(Math.random()*desserts.length)]
   }
+}
+
+function favoriteFood() {
+  favorites.push(foodResponse)
 }
