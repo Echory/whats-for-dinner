@@ -48,6 +48,10 @@ red - #ee5253
 }
 
 /*------MAIN BODY-------*/
+.hidden {
+  display: none!important;
+}
+
 .main-body {
   display: flex;
   justify-content: space-around;
@@ -56,6 +60,8 @@ red - #ee5253
 }
 
 .recipe-form {
+  min-width: 300px;
+  max-width: 300px;
   display: flex;
   flex-direction: column;
   padding: 6% 5%;
@@ -88,8 +94,25 @@ red - #ee5253
 .result {
   display: flex;
   justify-content: center;
+  min-width: 300px;
+  max-width: 200px;
   padding: 9.5% 4%;
   background-color: rgba(225, 225, 225, .9);
+}
+
+.should-make {
+  display: flex;
+  flex-direction: column;
+  font-style: italic;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.food-response {
+  font-weight: bold;
+  padding: 9.5% 4%;
+  font-style: normal;
+  font-size: 22px;
 }
 
 

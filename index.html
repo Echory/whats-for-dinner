@@ -11,25 +11,25 @@
     <section class="main-body">
       <form class="recipe-form"><span class="looking-for">What are you looking for?<span class="star">*</span></span>
         <div class="radio-button">
-          <input type="radio" name="side" id="side" checked>
-          <label for="name">Side</label>
+          <input type="radio" name="food" id="side" value="side" checked>
+          <label for="side">Side</label>
         </div>
         <div class="radio-button">
-          <input type="radio" name="main" id="main">
-          <label for="name">Main Dish</label>
+          <input type="radio" name="food" id="main" value="main">
+          <label for="main">Main Dish</label>
         </div>
         <div class="radio-button">
-          <input type="radio" name="dessert" id="dessert">
-          <label for="name">Dessert</label>
+          <input type="radio" name="food" id="dessert" value="dessert">
+          <label for="dessert">Dessert</label>
         </div>
         <div class="radio-button">
-          <input type="radio" name="entire" id="entire">
-          <label for="name">Entire Meal</label>
+          <input type="radio" name="food" id="entire" value="entire">
+          <label for="entire">Entire Meal</label>
         </div>
-        <button class="lets-cook">LETS COOK!</button>
+        <button class="lets-cook" id="lets-cook">LETS COOK!</button>
       </form>
-      <div class="result">
-        <img src="assets/cookpot.svg" class="cookpot">
+      <div class="result" id="recipeResult">
+        <img src="assets/cookpot.svg" class="cookpot" id="cookpot">
       </div>
     </section>
   </body>
