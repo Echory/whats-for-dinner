@@ -60,7 +60,7 @@ letsCookBtn.addEventListener('click', showRecipe);
 function showRecipe(event) {
 event.preventDefault();
 generateRecipe()
-document.getElementById("recipeResult").innerHTML = `<p>${foodResponse}</p>`;
+document.getElementById("recipeResult").innerHTML = `<p class="should-make">You should make: <span class="food-response">${foodResponse}</span></p>`;
 
 
 }
