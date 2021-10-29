@@ -49,6 +49,7 @@ var foodResponse;
 
 // QUERY SELECTORS
 var letsCookBtn = document.querySelector('#lets-cook');
+var cookpot = document.querySelector('#cookpot');
 
 
 //EVENT LISTENERS
@@ -56,7 +57,11 @@ letsCookBtn.addEventListener('click', showRecipe);
 
 
 //FUNCTIONS
-function showRecipe() {
+function showRecipe(event) {
+event.preventDefault();
+generateRecipe()
+document.getElementById("recipeResult").innerHTML = `<p>${foodResponse}</p>`;
+
 
 }
 

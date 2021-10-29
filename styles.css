@@ -48,6 +48,10 @@ red - #ee5253
 }
 
 /*------MAIN BODY-------*/
+.hidden {
+  display: none!important;
+}
+
 .main-body {
   display: flex;
   justify-content: space-around;
