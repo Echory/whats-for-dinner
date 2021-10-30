@@ -51,11 +51,15 @@ var favorites = [];
 // QUERY SELECTORS
 var letsCookBtn = document.querySelector('#lets-cook');
 var cookpot = document.querySelector('#cookpot');
+var viewFavoritesBtn = document.querySelector('#viewFav');
+var favoritesPage = document.querySelector('.favorites-page');
+var mainPage = document.querySelector('.main-body');
 ;
 
 
 //EVENT LISTENERS
 letsCookBtn.addEventListener('click', showRecipe);
+viewFavoritesBtn.addEventListener('click', viewFavorites);
 
 
 //FUNCTIONS
@@ -81,4 +85,10 @@ function generateRecipe() {
 
 function favoriteFood() {
   favorites.push(foodResponse);
+  document.querySelector('.favorites-page').innerHTML = `<p>${favorites}</p>`;
+}
+
+function viewFavorites() {
+  favoritesPage.classList.remove('hidden');
+  mainPage.classList.add('hidden');
 }
