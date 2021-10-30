@@ -41,7 +41,8 @@ red - #ee5253
 }
 
 .recipe-button,
-.view-favorites
+.view-favorites,
+.home-btn
  {
   margin-top: 15px;
   margin-right: 10px;
@@ -129,5 +130,16 @@ red - #ee5253
   background-color: #0fb9b1;
   border-radius: 5px;
 }
+
+/*------FAVORITES PAGE------*/
+.favorites-page {
+  background-color: rgba(225, 225, 225, .9);
+}
+
+/* .home-btn {
+  padding: 6px;
+  border-radius: 5px;
+  border: none;
+} */
 
 

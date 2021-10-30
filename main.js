@@ -54,13 +54,13 @@ var cookpot = document.querySelector('#cookpot');
 var viewFavoritesBtn = document.querySelector('#viewFav');
 var favoritesPage = document.querySelector('.favorites-page');
 var mainPage = document.querySelector('.main-body');
-;
+var homeBtn = document.querySelector('.home-btn');
 
 
 //EVENT LISTENERS
 letsCookBtn.addEventListener('click', showRecipe);
 viewFavoritesBtn.addEventListener('click', viewFavorites);
-
+homeBtn.addEventListener('click', goHome);
 
 //FUNCTIONS
 function showRecipe(event) {
@@ -91,4 +91,13 @@ function favoriteFood() {
 function viewFavorites() {
   favoritesPage.classList.remove('hidden');
   mainPage.classList.add('hidden');
+  homeBtn.classList.remove('hidden');
+  viewFavoritesBtn.classList.add('hidden');
+}
+
+function goHome() {
+  favoritesPage.classList.add('hidden');
+  mainPage.classList.remove('hidden');
+  homeBtn.classList.add('hidden');
+  viewFavoritesBtn.classList.remove('hidden');
 }
