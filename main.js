@@ -85,7 +85,10 @@ function generateRecipe() {
 
 function favoriteFood() {
   favorites.push(foodResponse);
-  document.querySelector('.favorites-page').innerHTML = `<p>${favorites}</p>`;
+  favoritesPage.innerHTML = ``
+  for(var i = 0; i < favorites.length; i++) {
+  document.querySelector('.favorites-page').innerHTML += `<p class="fav-list">${favorites[i]}</p>`;
+  }
 }
 
 function viewFavorites() {

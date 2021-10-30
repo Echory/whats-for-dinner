@@ -136,10 +136,9 @@ red - #ee5253
   background-color: rgba(225, 225, 225, .9);
 }
 
-/* .home-btn {
-  padding: 6px;
-  border-radius: 5px;
-  border: none;
-} */
+.fav-list {
+  padding: 10px;
+}
+
 
 
