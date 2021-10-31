@@ -55,6 +55,7 @@ var viewFavoritesBtn = document.querySelector('#viewFav');
 var favoritesPage = document.querySelector('.favorites-page');
 var mainPage = document.querySelector('.main-body');
 var homeBtn = document.querySelector('.home-btn');
+var favTitle = document.querySelector('.favs-title');
 
 //EVENT LISTENERS
 letsCookBtn.addEventListener('click', showRecipe);
@@ -65,7 +66,7 @@ homeBtn.addEventListener('click', goHome);
 function showRecipe(event) {
   event.preventDefault();
   generateRecipe()
-  document.getElementById("recipeResult").innerHTML = `<p class="should-make">You should make: <span class="food-response">${foodResponse}</span><button class="favorite-btn id="favoriteBtn" >Favorite &#128155</button></p>`;
+  document.getElementById("recipeResult").innerHTML = `<p class="should-make">You should make: <span class="food-response">${foodResponse}</span><button class="favorite-btn id="favoriteBtn" >FAVORITE &#128155</button></p>`;
 
   var favoriteBtn = document.querySelector('.favorite-btn');
   favoriteBtn.addEventListener('click', favoriteFood);
@@ -102,6 +103,7 @@ function viewFavorites() {
   mainPage.classList.add('hidden');
   homeBtn.classList.remove('hidden');
   viewFavoritesBtn.classList.add('hidden');
+  favTitle.classList.remove('hidden');
 }
 
 function goHome() {
@@ -109,6 +111,7 @@ function goHome() {
   mainPage.classList.remove('hidden');
   homeBtn.classList.add('hidden');
   viewFavoritesBtn.classList.remove('hidden');
+  favTitle.classList.add('hidden');
 }
 
 function deleteFav(event) {
