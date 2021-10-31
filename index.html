@@ -6,7 +6,11 @@
   <body>
     <header class="header">
       <p class="title">What's for Dinner?</p>
-      <button class="recipe-button">ADD A RECIPE</button>
+      <div class="header-btns">
+        <button class="recipe-button">ADD A RECIPE</button>
+        <button class="view-favorites" id="viewFav">VIEW FAVORITES</button> 
+        <button class="home-btn hidden">HOME</button>
+      </div>
     </header>
     <section class="main-body">
       <form class="recipe-form"><span class="looking-for">What are you looking for?<span class="star">*</span></span>
@@ -32,6 +36,7 @@
         <img src="assets/cookpot.svg" class="cookpot" id="cookpot">
       </div>
     </section>
+    <section class="favorites-page hidden"></section>
+    <script type="text/javascript" src="main.js"></script>
   </body>
-  <script type="text/javascript" src="main.js"></script>
 </html>

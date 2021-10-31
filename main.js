@@ -46,23 +46,29 @@ var desserts = [
 ];
 
 var foodResponse;
+var favorites = [];
 
 // QUERY SELECTORS
 var letsCookBtn = document.querySelector('#lets-cook');
 var cookpot = document.querySelector('#cookpot');
-
+var viewFavoritesBtn = document.querySelector('#viewFav');
+var favoritesPage = document.querySelector('.favorites-page');
+var mainPage = document.querySelector('.main-body');
+var homeBtn = document.querySelector('.home-btn');
 
 //EVENT LISTENERS
 letsCookBtn.addEventListener('click', showRecipe);
-
+viewFavoritesBtn.addEventListener('click', viewFavorites);
+homeBtn.addEventListener('click', goHome);
 
 //FUNCTIONS
 function showRecipe(event) {
-event.preventDefault();
-generateRecipe()
-document.getElementById("recipeResult").innerHTML = `<p class="should-make">You should make: <span class="food-response">${foodResponse}</span></p>`;
+  event.preventDefault();
+  generateRecipe()
+  document.getElementById("recipeResult").innerHTML = `<p class="should-make">You should make: <span class="food-response">${foodResponse}</span><button class="favorite-btn id="favoriteBtn" >Favorite &#128155</button></p>`;
 
-
+  var favoriteBtn = document.querySelector('.favorite-btn');
+  favoriteBtn.addEventListener('click', favoriteFood);
 }
 
 function generateRecipe() {
@@ -75,3 +81,43 @@ function generateRecipe() {
     foodResponse = desserts[Math.floor(Math.random()*desserts.length)]
   }
 }
+
+function favoriteFood() {
+  favorites.push(foodResponse);
+  renderData();
+}
+
+function renderData() {
+  favoritesPage.innerHTML = ``
+  for(var i = 0; i < favorites.length; i++) {
+  document.querySelector('.favorites-page').innerHTML += `<p class="list-item">${favorites[i]}</p>`;
+
+  var deleteSelector = document.querySelector('.list-item');
+  deleteSelector.addEventListener('dblclick', deleteFav);
+  }
+}
+
+function viewFavorites() {
+  favoritesPage.classList.remove('hidden');
+  mainPage.classList.add('hidden');
+  homeBtn.classList.remove('hidden');
+  viewFavoritesBtn.classList.add('hidden');
+}
+
+function goHome() {
+  favoritesPage.classList.add('hidden');
+  mainPage.classList.remove('hidden');
+  homeBtn.classList.add('hidden');
+  viewFavoritesBtn.classList.remove('hidden');
+}
+
+function deleteFav(event) {
+  var foodToDelete = event.currentTarget.innerText
+  for(var i = 0; i < favorites.length; i++) {
+    if(favorites[i] === foodToDelete){
+      favorites.splice(i, 1);
+    }
+  }
+  renderData();
+}
+
