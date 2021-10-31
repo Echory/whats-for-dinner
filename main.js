@@ -56,7 +56,6 @@ var favoritesPage = document.querySelector('.favorites-page');
 var mainPage = document.querySelector('.main-body');
 var homeBtn = document.querySelector('.home-btn');
 
-
 //EVENT LISTENERS
 letsCookBtn.addEventListener('click', showRecipe);
 viewFavoritesBtn.addEventListener('click', viewFavorites);
@@ -85,9 +84,16 @@ function generateRecipe() {
 
 function favoriteFood() {
   favorites.push(foodResponse);
+  renderData();
+}
+
+function renderData() {
   favoritesPage.innerHTML = ``
   for(var i = 0; i < favorites.length; i++) {
-  document.querySelector('.favorites-page').innerHTML += `<p class="fav-list">${favorites[i]}</p>`;
+  document.querySelector('.favorites-page').innerHTML += `<p class="list-item">${favorites[i]}</p>`;
+
+  var deleteSelector = document.querySelector('.list-item');
+  deleteSelector.addEventListener('dblclick', deleteFav);
   }
 }
 
@@ -104,3 +110,14 @@ function goHome() {
   homeBtn.classList.add('hidden');
   viewFavoritesBtn.classList.remove('hidden');
 }
+
+function deleteFav(event) {
+  var foodToDelete = event.currentTarget.innerText
+  for(var i = 0; i < favorites.length; i++) {
+    if(favorites[i] === foodToDelete){
+      favorites.splice(i, 1);
+    }
+  }
+  renderData();
+}
+
